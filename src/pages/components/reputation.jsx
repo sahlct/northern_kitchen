@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Reputation() {
-  // Data for the cards
+  // Ref to hold references to card elements
+  const cardRefs = useRef([]);
+  const containerRef = useRef(null);
+
+  // Data for the cards (same as before)
   const reputationData = [
     {
       title: "Best Services",
@@ -78,15 +87,73 @@ export default function Reputation() {
     },
   ];
 
+  useEffect(() => {
+    // Ensure GSAP and ScrollTrigger are fully loaded
+    const ctx = gsap.context(() => {
+      // Initial animation for all cards when component mounts
+      gsap.fromTo(
+        cardRefs.current,
+        {
+          opacity: 0,
+          y: 100,
+          scale: 0.9
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.2, // Stagger the animation of cards
+          ease: "power3.out"
+        }
+      );
+
+      // Scroll-triggered animations
+      cardRefs.current.forEach((card, index) => {
+        ScrollTrigger.create({
+          trigger: card,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play reverse play reverse", // More consistent toggle
+          animation: gsap.fromTo(
+            card,
+            {
+              opacity: 0,
+              y: 100,
+              scale: 0.9
+            },
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.8,
+              ease: "power3.out"
+            }
+          )
+        });
+      });
+    }, containerRef); // Scoped to container to ensure cleanup
+
+    // Cleanup function
+    return () => {
+      ctx.revert(); // Removes all GSAP animations
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
-    <div className="py-6 md:py-20 bg-gray-100">
+    <div 
+      ref={containerRef}
+      className="py-6 md:py-20 bg-gray-100"
+    >
       <div className="container mx-auto px-5 lg:px-28">
         <h2 className="md:text-3xl text-2xl font-bold text-center text-[#2947A9] mb-10">Our Reputation</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10">
           {reputationData.map((item, index) => (
             <div
               key={index}
-              className="bg-white text-left shadow-md hover:shadow-lg border-2 border-gray-200 md:p-6   p-4 transition-all duration-300"
+              ref={(el) => cardRefs.current[index] = el}
+              className="bg-white text-left shadow-md hover:shadow-lg border-2 border-gray-200 md:p-6 p-4 transition-all duration-300"
             >
               <div className="flex justify-start items-center mb-4 text-orange-500">{item.icon}</div>
               <h3 className="text-xl font-semibold text-[#2947A9] mb-2">{item.title}</h3>
