@@ -6,10 +6,10 @@ export default function ConnectUs() {
       <div className="max-w-4xl mx-auto rounded-lg md:p-8">
         {/* Heading Section */}
         <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#2947A9]">
             What can we do for you?
           </h2>
-          <p className="text-gray-600 mt-2">
+          <p className="text-[#152868] mt-2">
             We are ready to work on a project of any complexity, whether it's
             commercial or residential.
           </p>

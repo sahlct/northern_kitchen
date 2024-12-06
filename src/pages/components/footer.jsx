@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className='flex flex-col gap-2'>
                         <div className='flex gap-2 items-center'>
                             <p className="text-sm font-semibold text-blue-700">ADDRESS:</p>
-                            <p className="text-gray-600">6391 Elgin St. Celina, Delaware 10299</p>
+                            <p className="text-gray-600">6391 Elgin St. Celina, Delaware</p>
                         </div>
                         <div className='flex gap-2 items-center'>
                             <p className="text-sm font-semibold text-blue-700">PHONE:</p>
@@ -21,10 +21,10 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="brand flex gap-2 items-center">
-                        <div className="logo w-10 h-10">
+                        <div className="logo md:w-10 md:h-10 w-8 h-8">
                             <img src="https://i.pinimg.com/originals/71/f1/b4/71f1b48e456e173f305facb9e8d99b47.png" alt="logo" className='w-full h-full' />
                         </div>
-                        <div className="b_name text-2xl font-semibold">Northern Pro</div>
+                        <div className="b_name md:text-2xl text-[#152868] text-xl font-semibold">Northern Pro</div>
                     </div>
                 </div>
 
@@ -62,6 +62,7 @@ export default function Footer() {
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
                         </div>
                     </div>
+
                 </div>
             </div>
 

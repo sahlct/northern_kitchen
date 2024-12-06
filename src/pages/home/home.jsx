@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
 
-    <Navbar/>
+    {/* <Navbar/> */}
     <HomeContent/>
     <Reputation/>
     <About/>
@@ -23,7 +23,7 @@ export default function Home() {
     <Consultation/>
     <Services/>
     <ConnectUs/>
-    <Footer/>
+    {/* <Footer/> */}
 
     </>
   )

@@ -79,18 +79,18 @@ export default function Reputation() {
   ];
 
   return (
-    <div className="py-10 lg:py-20 bg-gray-100">
+    <div className="py-6 md:py-20 bg-gray-100">
       <div className="container mx-auto px-5 lg:px-28">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Our Reputation</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+        <h2 className="md:text-3xl text-2xl font-bold text-center text-[#2947A9] mb-10">Our Reputation</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10">
           {reputationData.map((item, index) => (
             <div
               key={index}
-              className="bg-white text-left shadow-md hover:shadow-lg border-2 border-gray-200 p-6 transition-all duration-300"
+              className="bg-white text-left shadow-md hover:shadow-lg border-2 border-gray-200 md:p-6   p-4 transition-all duration-300"
             >
               <div className="flex justify-start items-center mb-4 text-orange-500">{item.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h3>
-              <p className="text-gray-600">{item.description}</p>
+              <h3 className="text-xl font-semibold text-[#2947A9] mb-2">{item.title}</h3>
+              <p className="text-[#152868]">{item.description}</p>
             </div>
           ))}
         </div>

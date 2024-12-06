@@ -43,7 +43,7 @@ const clients = [
 export default function Clients() {
     return (
         <div className="bg-gray-100 p-6 md:pb-20 pb-16">
-          <h2 className="text-center text-3xl font-semibold mb-14 mt-10 md:mb-20">Clients</h2>
+          <h2 className="text-center md:text-3xl text-2xl text-[#2947A9] font-semibold mb-10 mt-5 md:mt-10 md:mb-20">Clients</h2>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 lg:px-28 px-0">
             {clients.map((client, index) => (
               <div

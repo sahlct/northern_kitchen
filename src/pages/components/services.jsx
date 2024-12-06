@@ -39,7 +39,7 @@ export default function Services() {
                 {
                     image: "https://www.designdemaison.in/wp-content/uploads/2024/03/Interior-Designer-For-Kitchen.jpeg",
                     header: "Interior 2",
-                    content: "234 Oak Rd, Dallas, TX",
+                    content: "234 Oak Rd, Dallas,",
                 },
                 {
                     image: "https://www.d2rinteriors.com/images/modular1.jpg",
@@ -133,7 +133,7 @@ export default function Services() {
         <div className="flex flex-col md:flex-row bg-white p-6 md:p-16 gap-8">
             {/* Left Side - Options */}
             <div className="flex flex-col gap-4 w-full md:w-1/4">
-                <h2 className="md:text-2xl text-xl text-start font-bold text-gray-800 md:mb-5">Services</h2>
+                <h2 className="md:text-3xl text-2xl text-start font-bold text-[#2947A9] md:mb-5">Services</h2>
                 {servicesData.map((service, index) => (
                     <div
                         key={index}

@@ -101,7 +101,7 @@ export default function Navbar() {
         },
         {
             name: 'Contact Us',
-            path: '/contact',
+            path: '/contactus',
             svg: (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -130,12 +130,11 @@ export default function Navbar() {
     return (
         <>
             {/* Navbar */}
-            <div className="bg-gray-300 fixed z-50 top-0 w-full text-black h-16 flex items-center px-5 sm:px-20">
+            <div className="bg-gray-300 fixed z-50 top-0 w-full text-black h-16 flex items-center justify-between px-5 sm:px-20">
                 <button
                     className="sm:hidden text-black mr-4"
                     onClick={() => setIsSidebarOpen(true)}
                 >
-
                     {/* SVG Menu Icon */}
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +163,7 @@ export default function Navbar() {
                             className="w-full h-full"
                         />
                     </div>
-                    <div className="b_name md:text-2xl text-lg font-semibold">Northern Pro</div>
+                    <div className="b_name md:text-2xl text-[#152868] text-lg font-semibold">Northern Pro</div>
                 </div>
 
                 {/* Desktop Navigation Options */}
@@ -183,13 +182,12 @@ export default function Navbar() {
 
             {/* Mobile Sidebar */}
             <div
-                className={`fixed inset-0 z-50 bg-black bg-opacity-50 flex transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                    }`}
+                className={`fixed inset-0 z-50 bg-black bg-opacity-50 flex transition-all duration-300 ${isSidebarOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                 onClick={() => setIsSidebarOpen(false)}
             >
                 <div
-                    className={`bg-white w-[60%] max-w-sm h-full p-5 flex flex-col gap-5 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-                        }`}
+                    className={`bg-white w-[60%] max-w-sm h-full p-5 flex flex-col gap-5 transition-all duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
+                    onClick={(e) => e.stopPropagation()}
                 >
                     <div className="flex w-full justify-end">
                         <button

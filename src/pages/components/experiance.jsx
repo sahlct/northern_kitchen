@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Experience() {
     return (
-        <div className="flex flex-col items-center md:gap-10 gap-5 md:flex-row md:items-center md:justify-between bg-white px-6 md:px-20 md:py-16 py-6">
+        <div className="flex flex-col items-center gap-5 sm:gap-10 sm:flex-row md:items-center md:justify-between bg-white px-6 lg:px-20 md:py-16 py-6">
 
-            <div className="grid grid-cols-1 md:px-20 w-full md:w-[60%]">
+            <div className="grid grid-cols-1 lg:px-20 w-full md:w-[60%]">
                 {/* Projects Completed */}
                 <div className="flex flex-col md:ms-28 ms-16 items-start px-10 py-5 text-start shadow-lg relative">
                     <img src="./assets/Vector.png" alt="" className="absolute md:w-20 md:h-20 w-14 h-14 -right-5 -top-5" />
@@ -49,10 +49,10 @@ export default function Experience() {
 
             {/* Experience Description */}
             <div className="mt-8 md:mt-0 md:ml-12 flex flex-col items-start md:items-start md:w-[40%]">
-                <h2 className="md:text-4xl text-2xl font-bold text-gray-800 md:text-left">
+                <h2 className="md:text-4xl text-2xl font-bold text-[#2947A9] md:text-left">
                     30 Years Experience
                 </h2>
-                <p className="text-gray-600 mt-4 text-start md:text-left">
+                <p className="text-[#152868] mt-4 text-start md:text-left">
                     Our company has been the leading provider of construction services to
                     clients throughout the USA since 1988.
                 </p>
