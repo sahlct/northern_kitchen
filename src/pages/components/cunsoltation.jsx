@@ -13,7 +13,7 @@ export default function Consultation() {
       </div>
 
       {/* Overlay and Content */}
-      <div className="relative max-h-72 z-10 bg-black bg-opacity-50 flex flex-col justify-center items-start px-6 md:px-16 py-8 md:py-24">
+      <div className="relative max-h-72 z-10 bg-black bg-opacity-50 flex flex-col justify-center items-start px-6 md:px-16 py-5 md:py-24">
         <div className="text-white space-y-4">
           {/* Heading */}
           <h2 className="text-lg md:text-5xl font-bold text-start">

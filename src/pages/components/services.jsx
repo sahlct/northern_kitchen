@@ -8,23 +8,23 @@ export default function Services() {
             items: [
                 {
                     image: "assets/projectManagementImage1.png",
-                    header: "Project Management 1",
-                    content: "102 Elm St, Miami, FL",
+                    header: "Project 1",
+                    content: "102 Elm St mumbai",
                 },
                 {
                     image: "assets/projectManagementImage2.png",
-                    header: "Project Management 2",
-                    content: "203 Willow Dr, Boston, MA",
+                    header: "Project 2",
+                    content: "203 Willow Dr, Boston",
                 },
                 {
                     image: "assets/projectManagementImage3.png",
-                    header: "Project Management 3",
-                    content: "304 Cedar Blvd, Austin, TX",
+                    header: "Project 3",
+                    content: "304 Cedar Blvd bxd",
                 },
                 {
                     image: "assets/projectManagementImage4.png",
-                    header: "Project Management 4",
-                    content: "405 Birch Ln, Denver, CO",
+                    header: "Project 4",
+                    content: "405 Birch Ln, Denver",
                 },
             ],
         },
@@ -33,23 +33,23 @@ export default function Services() {
             items: [
                 {
                     image: "https://5.imimg.com/data5/SELLER/Default/2022/11/LI/QM/SQ/91419038/kitchen-interior-service.jpg",
-                    header: "Interior Design 1",
-                    content: "123 Pine St, Atlanta, GA",
+                    header: "Interior 1",
+                    content: "123 Pine St, Atlanta",
                 },
                 {
                     image: "https://www.designdemaison.in/wp-content/uploads/2024/03/Interior-Designer-For-Kitchen.jpeg",
-                    header: "Interior Design 2",
+                    header: "Interior 2",
                     content: "234 Oak Rd, Dallas, TX",
                 },
                 {
                     image: "https://www.d2rinteriors.com/images/modular1.jpg",
-                    header: "Interior Design 3",
-                    content: "345 Cedar Ln, Houston, TX",
+                    header: "Interior 3",
+                    content: "345 Cedar Ln, TX",
                 },
                 {
                     image: "https://bonito.in/wp-content/uploads/2021/10/Blog-Detail-01-1.jpg",
-                    header: "Interior Design 4",
-                    content: "456 Spruce Ave, Charlotte, NC",
+                    header: "Interior 4",
+                    content: "456 Spruce Ave Tx",
                 },
             ],
         },
@@ -58,23 +58,23 @@ export default function Services() {
             items: [
                 {
                     image: "https://images.squarespace-cdn.com/content/v1/5358c6dbe4b090d1c9b457db/1578579636119-HFU75GFT4V4WKUSWJ992/Design+Process.jpg",
-                    header: "Consultation Service 1",
-                    content: "123 Main St, San Francisco, CA",
+                    header: "Consultation 1",
+                    content: "123 Main St CA",
                 },
                 {
                     image: "https://i.pinimg.com/736x/61/a2/26/61a226401a06364968c0b35ecffe2ea3.jpg",
-                    header: "Consultation Service 2",
-                    content: "456 Oak Ave, New York, NY",
+                    header: "Consultation 2",
+                    content: "456 Oak Ave, NY",
                 },
                 {
                     image: "https://www.easylifekitchens.co.za/wp-content/uploads/2022/03/Asset-11.png",
-                    header: "Consultation Service 3",
-                    content: "789 Pine St, Los Angeles, CA",
+                    header: "Consultation 3",
+                    content: "789 Pine St, CA",
                 },
                 {
                     image: "https://www.dfdesigninteriors.com/wp-content/uploads/2019/11/Kitchen-Design-Build.jpg",
-                    header: "Consultation Service 4",
-                    content: "101 Maple Rd, Chicago, IL",
+                    header: "Consultation 4",
+                    content: "101 Maple Rd, IL",
                 },
             ],
         },
@@ -84,7 +84,7 @@ export default function Services() {
                 {
                     image: "https://images.woodenstreet.de/image/data/modular%20kitchen/22.jpg",
                     header: "Design 1",
-                    content: "506 Spruce Ave, Portland, OR",
+                    content: "506 Spruce Ave",
                 },
                 {
                     image: "https://media.designcafe.com/wp-content/uploads/2022/01/08210202/contemporary-kitchen-design-for-your-kitchen.jpg",
@@ -94,12 +94,12 @@ export default function Services() {
                 {
                     image: "https://www.assureshift.in/sites/default/files/images/content-images/spacious-l-shaped-modular-kitchen-design.jpg",
                     header: "Design 3",
-                    content: "708 Redwood Ct, Phoenix, AZ",
+                    content: "708 Redwood Ct, AZ",
                 },
                 {
                     image: "https://ouchcart.com/cdn/shop/articles/105.jpg?v=1686338261",
                     header: "Design 4",
-                    content: "809 Maple Dr, Las Vegas, NV",
+                    content: "809 Maple Dr, NV",
                 },
             ],
         },
@@ -133,7 +133,7 @@ export default function Services() {
         <div className="flex flex-col md:flex-row bg-white p-6 md:p-16 gap-8">
             {/* Left Side - Options */}
             <div className="flex flex-col gap-4 w-full md:w-1/4">
-                <h2 className="text-2xl text-start font-bold text-gray-800 mb-5">Services</h2>
+                <h2 className="md:text-2xl text-xl text-start font-bold text-gray-800 md:mb-5">Services</h2>
                 {servicesData.map((service, index) => (
                     <div
                         key={index}
@@ -156,8 +156,8 @@ export default function Services() {
             </div>
 
             {/* Right Side - Image and Content */}
-            <div className="flex flex-col items-end w-full md:w-3/4">
-                <div className="grid grid-cols-2 gap-8 w-[80%]">
+            <div className="flex flex-col md:items-end w-full md:w-3/4">
+                <div className="grid grid-cols-2 md:gap-8 gap-2 md:w-[80%]">
                     {currentItems.map((item, index) => (
                         <div key={index} className="border overflow-hidden">
                             <img
@@ -166,19 +166,19 @@ export default function Services() {
                                 alt={item.header}
                             />
                             <div className="px-4 py-1 bg-[#2947A9] flex flex-col items-start">
-                                <h1 className="text-base font-semibold text-white">{item.header}</h1>
-                                <p className="text-xs text-gray-400">{item.content}</p>
+                                <h1 className="md:text-base text-sm font-semibold text-white">{item.header}</h1>
+                                <p className="text-xs text-start text-gray-400">{item.content}</p>
                             </div>
                         </div>
                     ))}
                 </div>
 
                 {/* Pagination Buttons */}
-                <div className="flex gap-8 w-[80%] items-center justify-between mt-3">
+                <div className="flex md:gap-8 gap-3 md:w-[80%] items-center justify-between mt-3">
                     <button
                         onClick={handleBack}
                         disabled={currentPage === 0}
-                        className={`px-10 py-2 border ${currentPage === 0
+                        className={`md:px-10 px-5 py-2 border ${currentPage === 0
                             ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                             : "bg-blue-500 text-white hover:bg-blue-600"
                             }`}
@@ -200,7 +200,7 @@ export default function Services() {
                             (currentPage + 1) * itemsPerPage >=
                             servicesData[activeOption].items.length
                         }
-                        className={`px-10 py-2 border ${(currentPage + 1) * itemsPerPage >=
+                        className={`md:px-10 px-5 py-2 border ${(currentPage + 1) * itemsPerPage >=
                             servicesData[activeOption].items.length
                             ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                             : "bg-blue-500 text-white hover:bg-blue-600"

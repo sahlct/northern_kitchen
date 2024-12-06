@@ -9,11 +9,13 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* Redirect "/" to "/home" */}
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          {/* Redirect all unmatched routes to the Home component */}
-          <Route path="*" element={<Navigate to="/" />} />
+          {/* Redirect all unmatched routes to "/home" */}
+          <Route path="*" element={<Navigate to="/home" />} />
         </Routes>
       </div>
     </Router>
